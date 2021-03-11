@@ -1,3 +1,4 @@
+import 'package:comidas/screens/categories_meals_screen.dart';
 import 'package:comidas/screens/categories_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -19,6 +20,9 @@ class MyApp extends StatelessWidget {
                 fontFamily: 'Roboto',
               ))),
       home: CategoriesScreen(),
+      routes: {
+        '/categories-meals': (ctx) => CategoriesMealsScreen(),
+      },
     );
   }
 }
