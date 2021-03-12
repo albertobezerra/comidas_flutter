@@ -1,5 +1,5 @@
 import 'package:comidas/components/category_item.dart';
-import 'package:comidas/models/data/dummy_data.dart';
+import 'package:comidas/data/dummy_data.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
