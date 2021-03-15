@@ -75,7 +75,7 @@ class MealDetailScreen extends StatelessWidget {
                         ),
                         title: Text(meal.steps[index]),
                       ),
-                      Divider(), //adiciona linha entre as etapas
+                      //Divider(), //adiciona linha entre as etapas
                     ],
                   );
                 },
