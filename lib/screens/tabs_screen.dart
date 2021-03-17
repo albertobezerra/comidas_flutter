@@ -1,3 +1,4 @@
+import 'package:comidas/components/main_drawer.dart';
 import 'package:comidas/screens/categories_screen.dart';
 import 'package:comidas/screens/favorite_screen.dart';
 import 'package:flutter/material.dart';
@@ -28,6 +29,7 @@ class _TabsScreenState extends State<TabsScreen> {
           _screens[_selectedScreenIndex]['title'],
         ),
       ),
+      drawer: MainDrwaer(),
       body: _screens[_selectedScreenIndex]['screen'],
       bottomNavigationBar: BottomNavigationBar(
         onTap: _selectScreen,
