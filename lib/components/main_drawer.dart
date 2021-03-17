@@ -53,8 +53,8 @@ class MainDrwaer extends StatelessWidget {
             () => Navigator.of(context).pushReplacementNamed(AppRoutes.HOME),
           ),
           _createItem(
-            Icons.settings,
-            'Configurações',
+            Icons.filter_alt,
+            'Filtro de comida',
             () =>
                 Navigator.of(context).pushReplacementNamed(AppRoutes.SETTINGS),
           ),
