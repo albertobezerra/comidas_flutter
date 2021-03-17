@@ -15,7 +15,7 @@ class MainDrwaer extends StatelessWidget {
       title: Text(
         label,
         style: TextStyle(
-          fontFamily: 'RobotoCondensed',
+          fontFamily: 'Roboto',
           fontSize: 24,
           fontWeight: FontWeight.bold,
         ),

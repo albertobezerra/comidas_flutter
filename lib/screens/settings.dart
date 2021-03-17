@@ -3,24 +3,35 @@ import 'package:comidas/models/filters.dart';
 import 'package:flutter/material.dart';
 
 class SettingsScreen extends StatefulWidget {
+  final Filtros filtras;
+  final Function(Filtros) onSettingsChanged;
+  const SettingsScreen(this.filtras, this.onSettingsChanged);
   @override
   _SettingsScreenState createState() => _SettingsScreenState();
 }
 
 class _SettingsScreenState extends State<SettingsScreen> {
-  var filtros = Filtros();
+  Filtros filtros;
+  @override
+  void initState() {
+    super.initState();
+    filtros = widget.filtras;
+  }
+
   Widget _createSwitch(
     String title,
     String subtitle,
     bool value,
-    Function onChanged,
+    Function(bool) onChanged,
   ) {
     return SwitchListTile.adaptive(
-      title: Text(title),
-      subtitle: Text(subtitle),
-      value: value,
-      onChanged: onChanged,
-    );
+        title: Text(title),
+        subtitle: Text(subtitle),
+        value: value,
+        onChanged: (value) {
+          onChanged(value);
+          widget.onSettingsChanged(filtros);
+        });
   }
 
   @override
